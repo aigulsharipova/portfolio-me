@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: var(--bg-color);
+}
 body {
   background-image: url('./background.jpg');
   height: 800px;
@@ -5,4 +11,74 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  margin: 0;
+  font-family: sans-serif;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+:root {
+  --bg-color: rgb(14 14 12);
+  --typewriterSpeed: 6s;
+  --typewriterCharacters: 19;
+}
+h1 {
+  font-size: clamp(1rem, 3vw + 1rem, 4rem);
+  color: white;
+  font-family: monospace;
+  position: relative;
+  width: max-content;
+}
+
+h1::before,
+h1::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+h1::before {
+  background: var(--bg-color);
+  animation: typewriter var(--typewriterSpeed)
+  steps(var(--typewriterCharacters)) 1s forwards;
+}
+
+h1::after {
+  width: 0.125em;
+  background: black;
+  animation: typewriter var(--typewriterSpeed)
+  steps(var(--typewriterCharacters)) 1s forwards,
+  blink 750ms steps(var(--typewriterCharacters)) infinite;
+}
+
+.subtitle {
+  color: white;
+  font-size: 2rem;
+  font-weight: 400;
+  opacity: 0;
+  transform: translateY(3rem);
+  animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
