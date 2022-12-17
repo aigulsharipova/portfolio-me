@@ -46,7 +46,7 @@ h1::before {
 }
 h1::after {
   width: 0.125em;
-  background: black;
+  background: rgb(14 14 12);
   animation: typewriter var(--typewriterSpeed)
   steps(var(--typewriterCharacters)) 1s forwards,
   blink 750ms steps(var(--typewriterCharacters)) infinite;
