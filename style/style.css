@@ -65,13 +65,11 @@ h1::after {
     left: 100%;
   }
 }
-
 @keyframes blink {
   to {
     background: transparent;
   }
 }
-
 @keyframes fadeInUp {
   to {
     opacity: 1;
