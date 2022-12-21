@@ -16,7 +16,7 @@ body {
   min-height: 100vh;
   display: grid;
   place-items: center;
-  text-align: center;
+ 
 }
 :root {
   --bg-color: rgb(14 14 12);
@@ -58,6 +58,7 @@ h1::after {
   opacity: 0;
   transform: translateY(3rem);
   animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
+  text-align: center;
 }
 
 @keyframes typewriter {
