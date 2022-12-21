@@ -77,3 +77,11 @@ h1::after {
     transform: translate(0);
   }
 }
+
+.btn {
+  position: relative;
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px;
+}
