@@ -78,7 +78,7 @@ h1::after {
   }
 }
 
-.btn {
+.btnMenu {
   position: relative;
   position: absolute;
   top: 8px;
